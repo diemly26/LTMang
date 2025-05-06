@@ -9,14 +9,21 @@
 <body>
 <%
   String temp = "temp";
-  session.setAttribute("temp", temp); // Sử dụng session mặc định
+  session.setAttribute("temp", temp);
 %>
 <form action="CheckLoginServlet" method="post">
-  Username: <input type="text" name="username"><br>
-  Password: <input type="password" name="password"><br>
-  <br>
-  <input type="submit" value="Login">
-  <input type="reset" value="Reset">
+  <h1>Login</h1>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"/>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"/>
+  </div>
+  <input type="submit" value="Login"/>
+  <input type="reset" value="Reset"/>
 </form>
+<a href="CheckLoginServlet?action=control" class="home-link">Home</a>
 </body>
 </html>
